@@ -75,9 +75,9 @@ import { RouterLink } from 'vue-router'
                     </div>
                 </div>
                 <div class="hidden md:block lg:block">
-                    <RouterLink to="/" class="pr-8">Home</RouterLink>
-                    <RouterLink to="/product" class="pr-8">Product</RouterLink>
-                    <RouterLink to="/product" class="pr-8">Information</RouterLink>
+                    <RouterLink to="/" class="pr-8" :class="{ 'text-orange-500': $route.path === '/' }">Home</RouterLink>
+                    <RouterLink to="/product" class="pr-8" :class="{ 'text-orange-500': $route.path === '/product'}">Product</RouterLink>
+                    <RouterLink to="/about" class="pr-8" :class="{ 'text-orange-500': $route.path === '/about'}">About</RouterLink>
                     <RouterLink to="/about" class="pr-8">About</RouterLink>
                 </div>
             </div>
