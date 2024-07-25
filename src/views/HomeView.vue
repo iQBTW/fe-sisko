@@ -12,6 +12,7 @@ import {
     CarouselPrevious
 } from '@/components/ui/carousel'
 import ProductCard from '@/components/ProductCard.vue'
+import Footer from '@/components/Footer.vue'
 import axios from 'axios'
 import { ref } from 'vue'
 
@@ -82,4 +83,5 @@ fetchProducts()
             </div>
         </div>
     </main>
+    <Footer/>
 </template>
