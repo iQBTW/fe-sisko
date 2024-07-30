@@ -6,23 +6,6 @@ import { RouterLink } from 'vue-router'
     <div class="sticky md:pt-0 md:pb-3 lg:pt-0 lg:pb-3 px-28 rounded-b shadow-md">
         <div class="flex items-center gap-9">
             <div class="flex items-center">
-                <span class="block">
-                    <svg
-                    class="w-6 h-6 text-gray-800 dark:text-white"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                >
-                    <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-width="2"
-                        d="M5 7h14M5 12h14M5 17h14"
-                    />
-                </svg>
-                </span>
                 <img
                     class="w-[100px] md:w-[280px] lg:w-[280px]"
                     src="@/assets/img/logo.jpg"
