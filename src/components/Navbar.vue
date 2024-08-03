@@ -1,5 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+import ShoppingCart from './ShoppingCart.vue';
+
 </script>
 
 <template>
@@ -66,4 +68,6 @@ import { RouterLink } from 'vue-router'
             </div>
         </div>
     </div>
+    <ShoppingCart :class=hidden></ShoppingCart>
+
 </template>

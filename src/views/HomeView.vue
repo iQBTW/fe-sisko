@@ -15,6 +15,7 @@ import ProductCard from '@/components/ProductCard.vue'
 import Footer from '@/components/Footer.vue'
 import axios from 'axios'
 import { ref } from 'vue'
+import ShoppingCart from '@/components/ShoppingCart.vue'
 
 const loading = ref(false)
 
