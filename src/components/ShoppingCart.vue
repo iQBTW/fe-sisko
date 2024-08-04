@@ -1,9 +1,11 @@
 <script setup>
 import Product from '@/assets/img/logo.jpg'
+
+
 </script>
 
 <template>
-    <div class="shadow-lg rounded-l-sm bg-white fixed z-50 right-0 top-0 min-h-screen w-1/4 overflow-y-auto">
+    <div :class="'shadow-lg rounded-l-sm bg-white fixed z-50 right-0 top-0 min-h-screen w-1/4 overflow-y-auto'">
         <div class="flex items-center justify-between pl-4 pr-2 py-2 gap-8 bg-gray-200">
             <h2>Daftar Belanja</h2>
             <span class="py-1 px-3 rounded text-white bg-red-500 hover:bg-red-600 transition-all ease-in 3s cursor-pointer">X</span>

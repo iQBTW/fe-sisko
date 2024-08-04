@@ -2,6 +2,11 @@
 import { RouterLink } from 'vue-router'
 import ShoppingCart from './ShoppingCart.vue';
 
+const isSideBarActive = ref(false);
+
+const openCart = () => {
+    document.getElementById('cart').classList.toggle('block')
+}
 </script>
 
 <template>
@@ -38,7 +43,7 @@ import ShoppingCart from './ShoppingCart.vue';
                                 />
                             </svg>
                         </button>
-                        <button class="mx-4">
+                        <button class="mx-4" @click="openCart">
                             <svg
                                 class="w-6 h-6 text-gray-800 dark:text-white"
                                 aria-hidden="true"
@@ -68,6 +73,6 @@ import ShoppingCart from './ShoppingCart.vue';
             </div>
         </div>
     </div>
-    <ShoppingCart :class=hidden></ShoppingCart>
+    <ShoppingCart isSideBarActive :id="'cart'"/>
 
 </template>
