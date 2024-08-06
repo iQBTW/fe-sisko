@@ -1,11 +1,14 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import ShoppingCart from './ShoppingCart.vue';
-
-const isSideBarActive = ref(false);
+import SearchBar from './SearchBar.vue';
 
 const openCart = () => {
-    document.getElementById('cart').classList.toggle('block')
+    document.getElementById('cart').classList.toggle('hidden')
+}
+
+const openSearch = () => {
+    document.getElementById('searchbar').classList.toggle('hidden')
 }
 </script>
 
@@ -25,7 +28,7 @@ const openCart = () => {
                 >
                     <p class="text-2xl hidden md:block lg:block">Hijja Indonesia</p>
                     <div class="flex items-center mt-5 md:mt-0 lg:mt-0">
-                        <button class="mx-4">
+                        <button class="mx-4" @click="openSearch">
                             <svg
                                 class="w-6 h-6 text-gray-800 dark:text-white"
                                 aria-hidden="true"
@@ -73,6 +76,6 @@ const openCart = () => {
             </div>
         </div>
     </div>
-    <ShoppingCart isSideBarActive :id="'cart'"/>
-
+    <ShoppingCart :class="'hidden'" :id="'cart'"/>
+    <SearchBar :class="'hidden'" :id="'searchbar'"/>
 </template>
