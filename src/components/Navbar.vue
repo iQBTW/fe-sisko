@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-import ShoppingCart from './ShoppingCart.vue';
-import SearchBar from './SearchBar.vue';
+import Cart from './Cart.vue'
+import SearchBar from './SearchBar.vue'
 
 const openCart = () => {
     document.getElementById('cart').classList.toggle('hidden')
@@ -68,14 +68,29 @@ const openSearch = () => {
                     </div>
                 </div>
                 <div class="hidden md:block lg:block">
-                    <RouterLink to="/" class="pr-8" :class="{ 'text-orange-500': $route.path === '/' }">Home</RouterLink>
-                    <RouterLink to="/product" class="pr-8" :class="{ 'text-orange-500': $route.path === '/product'}">Product</RouterLink>
-                    <RouterLink to="/about" class="pr-8" :class="{ 'text-orange-500': $route.path === '/about'}">About</RouterLink>
+                    <RouterLink
+                        to="/"
+                        class="pr-8"
+                        :class="{ 'text-orange-500': $route.path === '/' }"
+                        >Home</RouterLink
+                    >
+                    <RouterLink
+                        to="/product"
+                        class="pr-8"
+                        :class="{ 'text-orange-500': $route.path === '/product' }"
+                        >Product</RouterLink
+                    >
+                    <RouterLink
+                        to="/about"
+                        class="pr-8"
+                        :class="{ 'text-orange-500': $route.path === '/about' }"
+                        >About</RouterLink
+                    >
                     <RouterLink to="/about" class="pr-8">About</RouterLink>
                 </div>
             </div>
         </div>
     </div>
-    <ShoppingCart :class="'hidden'" :id="'cart'"/>
-    <SearchBar :class="'hidden'" :id="'searchbar'"/>
+    <Cart :class="'hidden'" :id="'cart'" />
+    <SearchBar :class="'hidden'" :id="'searchbar'" />
 </template>

@@ -15,7 +15,6 @@ import ProductCard from '@/components/ProductCard.vue'
 import Footer from '@/components/Footer.vue'
 import axios from 'axios'
 import { ref } from 'vue'
-import ShoppingCart from '@/components/ShoppingCart.vue'
 
 const loading = ref(false)
 
@@ -33,7 +32,7 @@ const imgCarousel = [
     }
 ]
 
-console.log('imgCarousel: ', imgCarousel);
+console.log('imgCarousel: ', imgCarousel)
 
 const plugin = Autoplay({
     delay: 2000,
@@ -59,22 +58,23 @@ fetchProducts()
 <template>
     <Navbar />
     <main>
-        <div class="min-h-screen">
+        <div class="w-full">
             <Carousel
-                :class="'min-h-screen'"
                 :plugins="[plugin]"
                 @mouseenter="plugin.stop"
                 @mouseleave="[plugin.reset(), plugin.play()]"
             >
-                <CarouselContent :class="'w-full'">
+                <CarouselContent :class="''">
                     <CarouselItem v-for="(img, index) in imgCarousel" :key="index">
-                            <img class="object-fill w-full" :src="img.images" alt="Carousel Photos" />
+                        <img class="object-fill w-full" :src="img.images" alt="Carousel Photos" />
                     </CarouselItem>
                 </CarouselContent>
-                <div class="relative bottom-1/2">
-                    <CarouselPrevious :class="'absolute top-1/2 left-5 z-10 -translate-y-1/2 cursor-pointer'"/>
-                </div>
-                <CarouselNext :class="'absolute top-1/2 right-5 z-10 -translate-y-1/2 cursor-pointer'"/>
+                <CarouselPrevious
+                    :class="'absolute top-1/2 left-5 z-10 -translate-y-1/2 cursor-pointer'"
+                />
+                <CarouselNext
+                    :class="'absolute top-1/2 right-5 z-10 -translate-y-1/2 cursor-pointer'"
+                />
             </Carousel>
         </div>
 
@@ -84,5 +84,5 @@ fetchProducts()
             </div>
         </div>
     </main>
-    <Footer/>
+    <Footer />
 </template>
