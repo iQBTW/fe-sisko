@@ -25,13 +25,15 @@ fetchProducts()
 
 <template>
     <Navbar />
-    <div class="px-5 py-8">
-        <div class="grid grid-cols-3 place-items-center gap-4">
-            <ProductCard
-                v-for="product in products"
-                :key="product.id"
-                :product="product"
-            ></ProductCard>
+    <main>
+        <div class="px-5 py-8">
+            <div class="grid grid-cols-3 place-items-center">
+                <ProductCard
+                    v-for="product in products"
+                    :key="product.id"
+                    :product="product"
+                ></ProductCard>
+            </div>
         </div>
-    </div>
+    </main>
 </template>

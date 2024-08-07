@@ -10,23 +10,22 @@ import {
 
 defineProps({
     product: {
-        type: Object,
+        type: Object
     }
 })
 </script>
 <template>
-    <div class="w-[330px]">
+    <div class="w-[330px] px-3">
         <Card>
             <CardHeader>
-                <CardTitle>{{ product.name }}</CardTitle>
-                <CardDescription
-                    ><p>{{ product.varian }}</p></CardDescription
-                >
+                <img class="w-fit" :src="product.photo" alt="Product Photo" />
             </CardHeader>
-            <CardContent><img class="w-fit" :src="product.photo" alt="Product Photo"></CardContent>
-            <CardFooter>
+            <CardContent>
+                <CardTitle class="text-center">{{ product.name }}</CardTitle>
+            </CardContent>
+            <CardFooter class="flex justify-between">
                 <p class="text-xl font-bold pr-2">Rp. {{ product.price }}</p>
-                <button class="py-2 px-5 bg-orange-500 rounded">Buy Now</button>
+                <button class="py-2 px-5 bg-black text-white rounded">Buy Now</button>
             </CardFooter>
         </Card>
     </div>

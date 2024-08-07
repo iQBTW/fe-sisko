@@ -81,12 +81,11 @@ const openSearch = () => {
                         >Product</RouterLink
                     >
                     <RouterLink
-                        to="/about"
+                        to="/blog"
                         class="pr-8"
-                        :class="{ 'text-orange-500': $route.path === '/about' }"
-                        >About</RouterLink
+                        :class="{ 'text-orange-500': $route.path === '/blog' }"
+                        >Blog</RouterLink
                     >
-                    <RouterLink to="/about" class="pr-8">About</RouterLink>
                 </div>
             </div>
         </div>
