@@ -15,7 +15,7 @@ defineProps({
 })
 </script>
 <template>
-    <div class="w-[330px] px-3">
+    <div class="w-[330px] px-3 py-2">
         <Card>
             <CardHeader>
                 <img class="w-fit" :src="product.photo" alt="Product Photo" />
