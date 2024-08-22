@@ -1,7 +1,10 @@
 <script setup>
-import ImageCarousel1 from '@/assets/img/F3na1Q_slide3.jpg'
+import ImageCarousel1 from '@/assets/img/nVHxmb_slide1.jpg'
 import ImageCarousel2 from '@/assets/img/mGMfXL_slide2.jpg'
-import ImageCarousel3 from '@/assets/img/nVHxmb_slide1.jpg'
+import ImageCarousel3 from '@/assets/img/F3na1Q_slide3.jpg'
+import Banner1 from '@/assets/img/u8DEdD_banner1.jpg'
+import Banner2 from '@/assets/img/bsHxJs_banner2.jpg'
+import Banner3 from '@/assets/img/88jcpq_banner3.jpg'
 import Navbar from '@/components/Navbar.vue'
 import Autoplay from 'embla-carousel-autoplay'
 import {
@@ -32,7 +35,17 @@ const imgCarousel = [
     }
 ]
 
-console.log('imgCarousel: ', imgCarousel)
+const imgBanner = [
+    {
+        images: Banner1
+    },
+    {
+        images: Banner2
+    },
+    {
+        images: Banner3
+    },
+]
 
 const plugin = Autoplay({
     delay: 2000,
@@ -64,7 +77,7 @@ fetchProducts()
                 @mouseenter="plugin.stop"
                 @mouseleave="[plugin.reset(), plugin.play()]"
             >
-                <CarouselContent :class="''">
+                <CarouselContent>
                     <CarouselItem v-for="(img, index) in imgCarousel" :key="index">
                         <img class="object-fill w-full" :src="img.images" alt="Carousel Photos" />
                     </CarouselItem>
@@ -76,6 +89,14 @@ fetchProducts()
                     :class="'absolute top-1/2 right-5 z-10 -translate-y-1/2 cursor-pointer'"
                 />
             </Carousel>
+        </div>
+
+        <div class="px-8 py-10">
+            <div class="flex justify-center items-center gap-10">
+                <div class="hover:bg-blend-multiply hover:brightness-50 transition-all duration-300 delay-500 ease in out" v-for="img, index in imgBanner" :key="index">
+                    <img class="w-[380px] hover:scale-105 transition-transform duration-300 transform" :src="img.images" alt="Banner">
+                </div>
+            </div>
         </div>
 
         <div class="px-8 py-10">
